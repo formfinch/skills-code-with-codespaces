@@ -33,7 +33,7 @@ The repository includes a progressive learning path with 4 main steps:
   - Understanding version locking and repeatability
 
 - **Step 3 (3-customize-codespace.md)**: Advanced customization
-  - Adding Dev Container features (like Python version control)
+  - Adding Dev Container features (like specifying Python versions)
   - Installing VS Code extensions automatically
   - Running lifecycle scripts (postCreateCommand)
   - Customizing the development environment
@@ -47,11 +47,14 @@ The repository includes a progressive learning path with 4 main steps:
 **Purpose**: Defines the codespace environment configuration
 
 **Components**:
-- `devcontainer.json` - Main configuration file specifying:
+- `devcontainer.json` - Main configuration file that initially specifies:
   - Container image (mcr.microsoft.com/devcontainers/universal:latest)
-  - Features to install
-  - VS Code extensions
-  - Lifecycle scripts
+  - Name for the configuration
+
+**During the tutorial, learners expand this configuration to include**:
+- Features to install (e.g., specific Python versions)
+- VS Code extensions (e.g., Python debugger)
+- Lifecycle scripts (e.g., postCreateCommand)
 
 **This configuration ensures**:
 - Consistent development environments across all users
@@ -124,7 +127,7 @@ By completing this tutorial, developers learn to:
 │  │                                        │  │
 │  │  Configured by:                        │  │
 │  │  - .devcontainer/devcontainer.json     │  │
-│  │  - .devcontainer/postCreate.sh         │  │
+│  │  - Additional scripts (added in Step 3)│  │
 │  └───────────────────────────────────────┘  │
 └─────────────────────────────────────────────┘
            │
